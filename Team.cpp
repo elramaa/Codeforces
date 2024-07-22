@@ -4,12 +4,18 @@
 using namespace std;
 
 int main(){
-	int n, solution, a, b, c;
+	int n, x;
+	int count = 0;
+	int sum = 0;
 	cin >> n;
-	while(n > 0){
-		cin >> a >> b >> c;
-		if(a+b+c >= 2) ++solution;
-		--n;
+	while(n--){
+		for(int i = 0; i < 3; ++i){
+			cin >> x;
+			sum += x;
+		}
+		if(sum >= 2) count++;
+		sum = 0;
 	}
-	cout << solution;
+	cout << count;
+	return 0;
 }

@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(){
-	int w;
+	short w;
 	cin >> w;
-	cout << ((w & 1) ? "YES" : "NO");
+	cout << ((w & 1 || w == 2) ? "NO" : "YES");
 }
