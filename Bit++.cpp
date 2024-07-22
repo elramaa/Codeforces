@@ -4,14 +4,14 @@
 using namespace std;
 
 int main(){
-	int n; 
-	int x = 0;
-	string prog;
+	int n, x = 0;
+	string opr;
 	cin >> n;
-	while(n > 0){
-		cin >> prog;
-		(prog == "++X" || prog == "X2++") ? ++x : --x;
-		--n;
+	while(n--){
+		cin >> opr;
+		if(opr[0] == '+' || opr[2] == '+') x++;
+		else if(opr[0] == '-' || opr[2] == '-') x--;
 	}
 	cout << x;
+	return 0;
 }

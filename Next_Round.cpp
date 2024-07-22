@@ -4,12 +4,14 @@
 using namespace std;
 
 int main(){
-	int n, k, x;
-	vector<int> a;
+	int n, k;
+	int count = 0;
 	cin >> n >> k;
-	while(n > 0){
-		cin >> x;
-		a.push_back(x);
-		--n;
+	int a[n];
+	for(int i = 0; i < n; ++i) cin >> a[i];	
+	for(int i = 0; i < n; ++i){
+		if(a[i] >= a[k-1] && a[i] > 0) count++;
 	}
+	cout << count;
+	return 0;
 }
